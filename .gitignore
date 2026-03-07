@@ -1,0 +1,35 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+# .env
+
+# ยกเว้นไฟล์ model ขนาดใหญ่
+resnet/model/resne152-V01_100.pt
+yolo11/model/best.pt
+knn/models/knn_model.joblib
+
+# ยกเว้นโฟลเดอร์ผลลัพธ์
+results_faceDog/
+
+# ยกเว้นไฟล์ขยะของระบบ
+.DS_Store
+dog_data.json
+dog_embeddings.npy
+knn_model.joblib
+nearest_neighbors_model.pkl
+models
+models/knn_latest.joblib
+checkpoints
+resnet/model_resnet152_default/
+search_history
+
+.python-version
+pyproject.toml
+uv.lock
