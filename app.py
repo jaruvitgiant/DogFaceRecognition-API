@@ -61,14 +61,15 @@ def create_app() -> FastAPI:
     )
 
     # ── CORS Middleware ────────────────────────────────────────────
+
+    # เพิ่ม Middleware นี้เข้าไป
     application.add_middleware(
         CORSMiddleware,
-        allow_origins=settings.ALLOWED_ORIGINS,
+        allow_origins=["*"], # ในโปรดักชั่นให้ใส่เฉพาะ URL ของ Django
         allow_credentials=True,
         allow_methods=["*"],
         allow_headers=["*"],
     )
-
     # ── Register Routers ──────────────────────────────────────────
     application.include_router(model_router.router)
     application.include_router(embedding_router.router)
